@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { logout } from '../lib/auth';
+import { signOut } from '../lib/auth';
 
 const NAV_ITEMS = [
     { to: '/', label: 'My Accounts', end: true },
@@ -32,7 +32,7 @@ export default function Layout({ user }) {
                     </nav>
                     <div className="flex items-center gap-3 text-sm">
                         <span className="text-white/60 hidden sm:inline">{user?.email}</span>
-                        <button onClick={logout} className="text-white/70 hover:text-white underline underline-offset-2">
+                        <button onClick={signOut} className="text-white/70 hover:text-white underline underline-offset-2">
                             Sign out
                         </button>
                     </div>
