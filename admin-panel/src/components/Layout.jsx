@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { logout } from '../lib/auth';
+import { signOut } from '../lib/auth';
 
 const NAV_ITEMS = [
     { to: '/', label: 'Dashboard', end: true },
@@ -42,7 +42,7 @@ export default function Layout({ user }) {
                 <div className="px-6 py-4 border-t border-ink-700 text-sm">
                     <div className="text-white/60 truncate">{user?.email}</div>
                     <button
-                        onClick={logout}
+                        onClick={signOut}
                         className="mt-2 text-white/70 hover:text-white underline underline-offset-2"
                     >
                         Sign out
